@@ -171,24 +171,103 @@ h2 {
 }
 
 .project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
   min-height: 164px;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: #ffffff;
   padding: 24px;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
 }
 
-.project-card h3 {
+.project-card:hover,
+.project-card:focus-within {
+  border-color: #b6c7dc;
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+.project-card:focus-within {
+  outline: 3px solid rgba(37, 99, 235, 0.22);
+  outline-offset: 3px;
+}
+
+.card-hit-area {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+}
+
+.card-hit-area:focus {
+  outline: none;
+}
+
+.project-card-content {
+  position: relative;
+  display: block;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.project-title {
+  display: block;
   margin-bottom: 10px;
   font-size: 1.08rem;
+  font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.015em;
 }
 
-.project-card p {
-  margin-bottom: 0;
+.project-description {
+  display: block;
   color: var(--muted);
   font-size: 0.96rem;
+}
+
+.project-actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  z-index: 2;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0 12px;
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  background: #eff6ff;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.project-link:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.28);
+  outline-offset: 2px;
 }
 
 .site-footer {
