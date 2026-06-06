@@ -44,10 +44,12 @@ a:hover {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 32px;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 22px 24px;
+  text-align: center;
 }
 
 .brand {
@@ -68,10 +70,12 @@ a:hover {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 112px 24px 96px;
+  text-align: center;
 }
 
 .hero-content {
   max-width: 760px;
+  margin: 0 auto;
 }
 
 .section-label {
@@ -99,7 +103,9 @@ h1 {
 
 .intro {
   max-width: 620px;
+  margin-right: auto;
   margin-bottom: 34px;
+  margin-left: auto;
   color: var(--muted);
   font-size: clamp(1.2rem, 2.2vw, 1.6rem);
   line-height: 1.45;
@@ -109,6 +115,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
 }
 
 .button {
@@ -154,11 +161,14 @@ h1 {
 
 .section-heading {
   margin-bottom: 34px;
+  text-align: center;
 }
 
 h2 {
   max-width: 720px;
+  margin-right: auto;
   margin-bottom: 0;
+  margin-left: auto;
   font-size: clamp(2rem, 4vw, 3.25rem);
   line-height: 1.05;
   letter-spacing: -0.035em;
@@ -181,6 +191,7 @@ h2 {
   border-radius: 8px;
   background: #ffffff;
   padding: 24px;
+  text-align: center;
   transition:
     border-color 160ms ease,
     box-shadow 160ms ease,
@@ -237,6 +248,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  justify-content: center;
   z-index: 2;
 }
 
@@ -274,12 +286,13 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px 28px;
-  justify-content: space-between;
+  justify-content: center;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 28px 24px 34px;
   color: var(--muted);
   font-size: 0.94rem;
+  text-align: center;
 }
 
 .site-footer p {
@@ -294,11 +307,12 @@ h2 {
 @media (max-width: 780px) {
   .nav,
   .site-footer {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
   }
 
   .nav-links {
+    justify-content: center;
     flex-wrap: wrap;
     gap: 14px 20px;
   }
