@@ -5,8 +5,8 @@
   --text: #0f172a;
   --muted: #475569;
   --border: #dbe3ec;
-  --accent: #2563eb;
-  --accent-dark: #1d4ed8;
+  --accent: #29bf12;
+  --accent-dark: #1f9410;
   --max-width: 1120px;
 }
 
@@ -208,7 +208,7 @@ h2 {
 }
 
 .project-card:focus-within {
-  outline: 3px solid rgba(37, 99, 235, 0.22);
+  outline: 3px solid rgba(41, 191, 18, 0.22);
   outline-offset: 3px;
 }
 
@@ -273,13 +273,13 @@ h2 {
 
 .project-link:hover,
 .project-link:focus-visible {
-  background: #eff6ff;
+  background: #f0fdf0;
   border-color: var(--accent);
   color: var(--accent);
 }
 
 .project-link:focus-visible {
-  outline: 2px solid rgba(37, 99, 235, 0.28);
+  outline: 2px solid rgba(41, 191, 18, 0.28);
   outline-offset: 2px;
 }
 
