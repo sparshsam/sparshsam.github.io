@@ -283,6 +283,52 @@ h2 {
   outline-offset: 2px;
 }
 
+.ecosystem {
+  padding: 76px 24px 86px;
+}
+
+.ecosystem > * {
+  max-width: var(--max-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ecosystem-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--border);
+}
+
+.ecosystem-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 24px;
+  background: var(--surface);
+  text-decoration: none;
+  transition: background 160ms ease;
+}
+
+.ecosystem-item:hover {
+  background: #ffffff;
+}
+
+.ecosystem-name {
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.ecosystem-desc {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;
@@ -328,6 +374,10 @@ h2 {
   }
 
   .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ecosystem-list {
     grid-template-columns: 1fr;
   }
 }
